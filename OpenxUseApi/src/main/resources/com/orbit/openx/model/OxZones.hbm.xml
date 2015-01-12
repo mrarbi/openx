@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Zones" table="ox_zones" >
+        <id name="zoneid" type="java.lang.Integer">
+            <column name="zoneid" />
+            <generator class="identity" />
+        </id>
+        <property name="affiliateid" type="java.lang.Integer">
+            <column name="affiliateid" />
+        </property>
+        <property name="zonename" type="string">
+            <column name="zonename" length="245" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="delivery" type="short">
+            <column name="delivery" not-null="true" />
+        </property>
+        <property name="zonetype" type="short">
+            <column name="zonetype" not-null="true" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="65535" not-null="true" />
+        </property>
+        <property name="width" type="short">
+            <column name="width" not-null="true" />
+        </property>
+        <property name="height" type="short">
+            <column name="height" not-null="true" />
+        </property>
+        <property name="adSelection" type="string">
+            <column name="ad_selection" length="65535" not-null="true" />
+        </property>
+        <property name="chain" type="string">
+            <column name="chain" length="65535" not-null="true" />
+        </property>
+        <property name="prepend" type="string">
+            <column name="prepend" length="65535" not-null="true" />
+        </property>
+        <property name="append" type="string">
+            <column name="append" length="65535" not-null="true" />
+        </property>
+        <property name="appendtype" type="byte">
+            <column name="appendtype" not-null="true" />
+        </property>
+        <property name="forceappend" type="string">
+            <column name="forceappend" length="2" />
+        </property>
+        <property name="inventoryForecastType" type="short">
+            <column name="inventory_forecast_type" not-null="true" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="cost" type="big_decimal">
+            <column name="cost" precision="10" scale="4" />
+        </property>
+        <property name="costType" type="java.lang.Short">
+            <column name="cost_type" />
+        </property>
+        <property name="costVariableId" type="string">
+            <column name="cost_variable_id" />
+        </property>
+        <property name="technologyCost" type="big_decimal">
+            <column name="technology_cost" precision="10" scale="4" />
+        </property>
+        <property name="technologyCostType" type="java.lang.Short">
+            <column name="technology_cost_type" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+        <property name="block" type="int">
+            <column name="block" not-null="true" />
+        </property>
+        <property name="capping" type="int">
+            <column name="capping" not-null="true" />
+        </property>
+        <property name="sessionCapping" type="int">
+            <column name="session_capping" not-null="true" />
+        </property>
+        <property name="what" type="string">
+            <column name="what" length="65535" not-null="true" />
+        </property>
+        <property name="asZoneId" type="java.lang.Integer">
+            <column name="as_zone_id" />
+        </property>
+        <property name="isInAdDirect" type="boolean">
+            <column name="is_in_ad_direct" not-null="true" />
+        </property>
+        <property name="rate" type="big_decimal">
+            <column name="rate" />
+        </property>
+        <property name="pricing" type="string">
+            <column name="pricing" length="50" not-null="true" />
+        </property>
+        <property name="oacCategoryId" type="java.lang.Integer">
+            <column name="oac_category_id" />
+        </property>
+        <property name="extAdselection" type="string">
+            <column name="ext_adselection" />
+        </property>
+        <property name="showCappedNoCookie" type="byte">
+            <column name="show_capped_no_cookie" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

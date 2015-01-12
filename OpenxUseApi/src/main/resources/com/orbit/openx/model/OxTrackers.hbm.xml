@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Trackers" table="ox_trackers" >
+        <id name="trackerid" type="java.lang.Integer">
+            <column name="trackerid" />
+            <generator class="identity" />
+        </id>
+        <property name="trackername" type="string">
+            <column name="trackername" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="clientid" type="int">
+            <column name="clientid" not-null="true" />
+        </property>
+        <property name="viewwindow" type="int">
+            <column name="viewwindow" not-null="true" />
+        </property>
+        <property name="clickwindow" type="int">
+            <column name="clickwindow" not-null="true" />
+        </property>
+        <property name="blockwindow" type="int">
+            <column name="blockwindow" not-null="true" />
+        </property>
+        <property name="status" type="short">
+            <column name="status" not-null="true" />
+        </property>
+        <property name="type" type="short">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="linkcampaigns" type="string">
+            <column name="linkcampaigns" length="2" not-null="true" />
+        </property>
+        <property name="variablemethod" type="string">
+            <column name="variablemethod" length="8" not-null="true" />
+        </property>
+        <property name="appendcode" type="string">
+            <column name="appendcode" length="65535" not-null="true" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

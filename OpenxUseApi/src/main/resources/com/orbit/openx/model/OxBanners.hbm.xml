@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Banners" table="ox_banners" >
+        <id name="bannerid" type="java.lang.Integer">
+            <column name="bannerid" />
+            <generator class="identity" />
+        </id>
+        <property name="campaignid" type="int">
+            <column name="campaignid" not-null="true" />
+        </property>
+        <property name="contenttype" type="string">
+            <column name="contenttype" length="4" not-null="true" />
+        </property>
+        <property name="pluginversion" type="int">
+            <column name="pluginversion" not-null="true" />
+        </property>
+        <property name="storagetype" type="string">
+            <column name="storagetype" length="7" not-null="true" />
+        </property>
+        <property name="filename" type="string">
+            <column name="filename" not-null="true" />
+        </property>
+        <property name="imageurl" type="string">
+            <column name="imageurl" not-null="true" />
+        </property>
+        <property name="htmltemplate" type="string">
+            <column name="htmltemplate" length="65535" not-null="true" />
+        </property>
+        <property name="htmlcache" type="string">
+            <column name="htmlcache" length="65535" not-null="true" />
+        </property>
+        <property name="width" type="short">
+            <column name="width" not-null="true" />
+        </property>
+        <property name="height" type="short">
+            <column name="height" not-null="true" />
+        </property>
+        <property name="weight" type="byte">
+            <column name="weight" not-null="true" />
+        </property>
+        <property name="seq" type="byte">
+            <column name="seq" not-null="true" />
+        </property>
+        <property name="target" type="string">
+            <column name="target" length="16" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="65535" not-null="true" />
+        </property>
+        <property name="alt" type="string">
+            <column name="alt" not-null="true" />
+        </property>
+        <property name="statustext" type="string">
+            <column name="statustext" not-null="true" />
+        </property>
+        <property name="bannertext" type="string">
+            <column name="bannertext" length="65535" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="adserver" type="string">
+            <column name="adserver" not-null="true" />
+        </property>
+        <property name="block" type="int">
+            <column name="block" not-null="true" />
+        </property>
+        <property name="capping" type="int">
+            <column name="capping" not-null="true" />
+        </property>
+        <property name="sessionCapping" type="int">
+            <column name="session_capping" not-null="true" />
+        </property>
+        <property name="compiledlimitation" type="string">
+            <column name="compiledlimitation" length="65535" not-null="true" />
+        </property>
+        <property name="aclPlugins" type="string">
+            <column name="acl_plugins" length="65535" />
+        </property>
+        <property name="append" type="string">
+            <column name="append" length="65535" not-null="true" />
+        </property>
+        <property name="bannertype" type="byte">
+            <column name="bannertype" not-null="true" />
+        </property>
+        <property name="altFilename" type="string">
+            <column name="alt_filename" not-null="true" />
+        </property>
+        <property name="altImageurl" type="string">
+            <column name="alt_imageurl" not-null="true" />
+        </property>
+        <property name="altContenttype" type="string">
+            <column name="alt_contenttype" length="4" not-null="true" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+        <property name="aclsUpdated" type="timestamp">
+            <column name="acls_updated" length="19" not-null="true" />
+        </property>
+        <property name="keyword" type="string">
+            <column name="keyword" not-null="true" />
+        </property>
+        <property name="transparent" type="boolean">
+            <column name="transparent" not-null="true" />
+        </property>
+        <property name="parameters" type="string">
+            <column name="parameters" length="65535" />
+        </property>
+        <property name="anBannerId" type="java.lang.Integer">
+            <column name="an_banner_id" />
+        </property>
+        <property name="asBannerId" type="java.lang.Integer">
+            <column name="as_banner_id" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+        <property name="adDirectStatus" type="byte">
+            <column name="ad_direct_status" not-null="true" />
+        </property>
+        <property name="adDirectRejectionReasonId" type="byte">
+            <column name="ad_direct_rejection_reason_id" not-null="true" />
+        </property>
+        <property name="extBannertype" type="string">
+            <column name="ext_bannertype" />
+        </property>
+        <property name="prepend" type="string">
+            <column name="prepend" length="65535" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataBktA" table="ox_data_bkt_a" >
+        <composite-id name="id" class="com.orbit.openx.model.DataBktAId">
+            <key-property name="serverConvId" type="long">
+                <column name="server_conv_id" />
+            </key-property>
+            <key-property name="serverIp" type="string">
+                <column name="server_ip" length="16" />
+            </key-property>
+        </composite-id>
+        <property name="trackerId" type="int">
+            <column name="tracker_id" not-null="true" />
+        </property>
+        <property name="dateTime" type="timestamp">
+            <column name="date_time" length="19" not-null="true" />
+        </property>
+        <property name="actionDateTime" type="timestamp">
+            <column name="action_date_time" length="19" not-null="true" />
+        </property>
+        <property name="creativeId" type="int">
+            <column name="creative_id" not-null="true" />
+        </property>
+        <property name="zoneId" type="int">
+            <column name="zone_id" not-null="true" />
+        </property>
+        <property name="ipAddress" type="string">
+            <column name="ip_address" length="16" not-null="true" />
+        </property>
+        <property name="action" type="java.lang.Integer">
+            <column name="action" />
+        </property>
+        <property name="window" type="java.lang.Integer">
+            <column name="window" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status" />
+        </property>
+    </class>
+</hibernate-mapping>

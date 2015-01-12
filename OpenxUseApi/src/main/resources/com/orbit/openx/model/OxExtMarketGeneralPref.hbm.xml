@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.ExtMarketGeneralPref" table="ox_ext_market_general_pref" >
+        <composite-id name="id" class="com.orbit.openx.model.ExtMarketGeneralPrefId">
+            <key-property name="accountId" type="int">
+                <column name="account_id" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+        </composite-id>
+        <property name="value" type="string">
+            <column name="value" length="65535" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

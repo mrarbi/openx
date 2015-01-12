@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataSummaryChannelDaily" table="ox_data_summary_channel_daily" >
+        <id name="dataSummaryChannelDailyId" type="java.lang.Long">
+            <column name="data_summary_channel_daily_id" />
+            <generator class="identity" />
+        </id>
+        <property name="day" type="date">
+            <column name="day" length="10" not-null="true" />
+        </property>
+        <property name="channelId" type="int">
+            <column name="channel_id" not-null="true" />
+        </property>
+        <property name="zoneId" type="int">
+            <column name="zone_id" not-null="true" />
+        </property>
+        <property name="forecastImpressions" type="int">
+            <column name="forecast_impressions" not-null="true" />
+        </property>
+        <property name="actualImpressions" type="int">
+            <column name="actual_impressions" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

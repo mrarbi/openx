@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.ExtMarketStats" table="ox_ext_market_stats" >
+        <composite-id name="id" class="com.orbit.openx.model.ExtMarketStatsId">
+            <key-property name="dateTime" type="timestamp">
+                <column name="date_time" length="19" />
+            </key-property>
+            <key-property name="marketAdvertiserId" type="string">
+                <column name="market_advertiser_id" length="36" />
+            </key-property>
+            <key-property name="websiteId" type="int">
+                <column name="website_id" />
+            </key-property>
+            <key-property name="adWidth" type="short">
+                <column name="ad_width" />
+            </key-property>
+            <key-property name="adHeight" type="short">
+                <column name="ad_height" />
+            </key-property>
+            <key-property name="zoneId" type="java.lang.Integer">
+                <column name="zone_id" />
+            </key-property>
+            <key-property name="adId" type="java.lang.Integer">
+                <column name="ad_id" />
+            </key-property>
+            <key-property name="impressions" type="int">
+                <column name="impressions" />
+            </key-property>
+            <key-property name="clicks" type="java.lang.Integer">
+                <column name="clicks" />
+            </key-property>
+            <key-property name="requests" type="java.lang.Integer">
+                <column name="requests" />
+            </key-property>
+            <key-property name="revenue" type="big_decimal">
+                <column name="revenue" precision="17" scale="5" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

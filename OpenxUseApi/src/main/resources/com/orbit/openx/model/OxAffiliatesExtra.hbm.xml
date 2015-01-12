@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.AffiliatesExtra" table="ox_affiliates_extra" >
+        <id name="affiliateid" type="int">
+            <column name="affiliateid" />
+            <generator class="assigned" />
+        </id>
+        <property name="address" type="string">
+            <column name="address" length="65535" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" />
+        </property>
+        <property name="postcode" type="string">
+            <column name="postcode" length="64" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="64" />
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="64" />
+        </property>
+        <property name="accountContact" type="string">
+            <column name="account_contact" />
+        </property>
+        <property name="payeeName" type="string">
+            <column name="payee_name" />
+        </property>
+        <property name="taxId" type="string">
+            <column name="tax_id" length="64" />
+        </property>
+        <property name="modeOfPayment" type="string">
+            <column name="mode_of_payment" length="64" />
+        </property>
+        <property name="currency" type="string">
+            <column name="currency" length="64" />
+        </property>
+        <property name="uniqueUsers" type="java.lang.Integer">
+            <column name="unique_users" />
+        </property>
+        <property name="uniqueViews" type="java.lang.Integer">
+            <column name="unique_views" />
+        </property>
+        <property name="pageRank" type="java.lang.Integer">
+            <column name="page_rank" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" />
+        </property>
+        <property name="helpFile" type="string">
+            <column name="help_file" />
+        </property>
+    </class>
+</hibernate-mapping>

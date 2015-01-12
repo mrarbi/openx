@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Acls" table="ox_acls" >
+        <composite-id name="id" class="com.orbit.openx.model.AclsId">
+            <key-property name="bannerid" type="int">
+                <column name="bannerid" />
+            </key-property>
+            <key-property name="logical" type="string">
+                <column name="logical" length="3" />
+            </key-property>
+            <key-property name="type" type="string">
+                <column name="type" />
+            </key-property>
+            <key-property name="comparison" type="string">
+                <column name="comparison" length="2" />
+            </key-property>
+            <key-property name="data" type="string">
+                <column name="data" length="65535" />
+            </key-property>
+            <key-property name="executionorder" type="int">
+                <column name="executionorder" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

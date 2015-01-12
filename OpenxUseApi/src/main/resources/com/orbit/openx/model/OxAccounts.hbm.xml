@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Accounts" table="ox_accounts" >
+        <id name="accountId" type="java.lang.Integer">
+            <column name="account_id" />
+            <generator class="identity" />
+        </id>
+        <property name="accountType" type="string">
+            <column name="account_type" length="16" not-null="true" />
+        </property>
+        <property name="accountName" type="string">
+            <column name="account_name" />
+        </property>
+        <property name="m2mPassword" type="string">
+            <column name="m2m_password" length="32" />
+        </property>
+        <property name="m2mTicket" type="string">
+            <column name="m2m_ticket" length="32" />
+        </property>
+    </class>
+</hibernate-mapping>

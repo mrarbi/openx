@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataSummaryAdZoneAssoc" table="ox_data_summary_ad_zone_assoc" >
+        <id name="dataSummaryAdZoneAssocId" type="java.lang.Long">
+            <column name="data_summary_ad_zone_assoc_id" />
+            <generator class="identity" />
+        </id>
+        <property name="operationInterval" type="int">
+            <column name="operation_interval" not-null="true" />
+        </property>
+        <property name="operationIntervalId" type="int">
+            <column name="operation_interval_id" not-null="true" />
+        </property>
+        <property name="intervalStart" type="timestamp">
+            <column name="interval_start" length="19" not-null="true" />
+        </property>
+        <property name="intervalEnd" type="timestamp">
+            <column name="interval_end" length="19" not-null="true" />
+        </property>
+        <property name="adId" type="int">
+            <column name="ad_id" not-null="true" />
+        </property>
+        <property name="zoneId" type="int">
+            <column name="zone_id" not-null="true" />
+        </property>
+        <property name="requiredImpressions" type="int">
+            <column name="required_impressions" not-null="true" />
+        </property>
+        <property name="requestedImpressions" type="int">
+            <column name="requested_impressions" not-null="true" />
+        </property>
+        <property name="priority" type="double">
+            <column name="priority" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="priorityFactor" type="java.lang.Double">
+            <column name="priority_factor" precision="22" scale="0" />
+        </property>
+        <property name="priorityFactorLimited" type="short">
+            <column name="priority_factor_limited" not-null="true" />
+        </property>
+        <property name="pastZoneTrafficFraction" type="java.lang.Double">
+            <column name="past_zone_traffic_fraction" precision="22" scale="0" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="created" length="19" not-null="true" />
+        </property>
+        <property name="createdBy" type="int">
+            <column name="created_by" not-null="true" />
+        </property>
+        <property name="expired" type="timestamp">
+            <column name="expired" length="19" />
+        </property>
+        <property name="expiredBy" type="java.lang.Integer">
+            <column name="expired_by" />
+        </property>
+        <property name="toBeDelivered" type="boolean">
+            <column name="to_be_delivered" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

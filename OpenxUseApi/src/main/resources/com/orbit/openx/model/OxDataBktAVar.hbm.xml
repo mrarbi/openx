@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataBktAVar" table="ox_data_bkt_a_var" >
+        <composite-id name="id" class="com.orbit.openx.model.DataBktAVarId">
+            <key-property name="serverConvId" type="long">
+                <column name="server_conv_id" />
+            </key-property>
+            <key-property name="serverIp" type="string">
+                <column name="server_ip" length="16" />
+            </key-property>
+            <key-property name="trackerVariableId" type="int">
+                <column name="tracker_variable_id" />
+            </key-property>
+        </composite-id>
+        <property name="value" type="string">
+            <column name="value" length="65535" />
+        </property>
+        <property name="dateTime" type="timestamp">
+            <column name="date_time" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.TrackerAppend" table="ox_tracker_append" >
+        <id name="trackerAppendId" type="java.lang.Integer">
+            <column name="tracker_append_id" />
+            <generator class="identity" />
+        </id>
+        <property name="trackerId" type="int">
+            <column name="tracker_id" not-null="true" />
+        </property>
+        <property name="rank" type="int">
+            <column name="rank" not-null="true" />
+        </property>
+        <property name="tagcode" type="string">
+            <column name="tagcode" length="65535" not-null="true" />
+        </property>
+        <property name="paused" type="string">
+            <column name="paused" length="2" not-null="true" />
+        </property>
+        <property name="autotrack" type="string">
+            <column name="autotrack" length="2" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

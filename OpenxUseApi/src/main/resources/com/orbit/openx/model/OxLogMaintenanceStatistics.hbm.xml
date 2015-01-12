@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.LogMaintenanceStatistics" table="ox_log_maintenance_statistics" >
+        <id name="logMaintenanceStatisticsId" type="java.lang.Integer">
+            <column name="log_maintenance_statistics_id" />
+            <generator class="identity" />
+        </id>
+        <property name="startRun" type="timestamp">
+            <column name="start_run" length="19" not-null="true" />
+        </property>
+        <property name="endRun" type="timestamp">
+            <column name="end_run" length="19" not-null="true" />
+        </property>
+        <property name="duration" type="int">
+            <column name="duration" not-null="true" />
+        </property>
+        <property name="adserverRunType" type="java.lang.Integer">
+            <column name="adserver_run_type" />
+        </property>
+        <property name="searchRunType" type="java.lang.Integer">
+            <column name="search_run_type" />
+        </property>
+        <property name="trackerRunType" type="java.lang.Integer">
+            <column name="tracker_run_type" />
+        </property>
+        <property name="updatedTo" type="timestamp">
+            <column name="updated_to" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

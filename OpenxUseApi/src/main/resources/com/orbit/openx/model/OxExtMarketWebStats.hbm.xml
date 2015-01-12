@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.ExtMarketWebStats" table="ox_ext_market_web_stats" >
+        <composite-id name="id" class="com.orbit.openx.model.ExtMarketWebStatsId">
+            <key-property name="PWebsiteId" type="string">
+                <column name="p_website_id" length="36" />
+            </key-property>
+            <key-property name="impressions" type="int">
+                <column name="impressions" />
+            </key-property>
+            <key-property name="dateTime" type="timestamp">
+                <column name="date_time" length="19" />
+            </key-property>
+            <key-property name="revenue" type="big_decimal">
+                <column name="revenue" precision="17" scale="5" />
+            </key-property>
+            <key-property name="width" type="java.lang.Short">
+                <column name="width" />
+            </key-property>
+            <key-property name="height" type="java.lang.Short">
+                <column name="height" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

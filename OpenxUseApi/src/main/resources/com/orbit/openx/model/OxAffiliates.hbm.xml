@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Affiliates" table="ox_affiliates" >
+        <id name="affiliateid" type="java.lang.Integer">
+            <column name="affiliateid" />
+            <generator class="identity" />
+        </id>
+        <property name="agencyid" type="int">
+            <column name="agencyid" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="mnemonic" type="string">
+            <column name="mnemonic" length="5" not-null="true" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="64" not-null="true" />
+        </property>
+        <property name="website" type="string">
+            <column name="website" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+        <property name="anWebsiteId" type="java.lang.Integer">
+            <column name="an_website_id" />
+        </property>
+        <property name="oacCountryCode" type="string">
+            <column name="oac_country_code" length="2" not-null="true" />
+        </property>
+        <property name="oacLanguageId" type="java.lang.Integer">
+            <column name="oac_language_id" />
+        </property>
+        <property name="oacCategoryId" type="java.lang.Integer">
+            <column name="oac_category_id" />
+        </property>
+        <property name="asWebsiteId" type="java.lang.Integer">
+            <column name="as_website_id" />
+        </property>
+        <property name="accountId" type="java.lang.Integer">
+            <column name="account_id" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>

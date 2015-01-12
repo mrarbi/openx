@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DatabaseAction" table="ox_database_action" >
+        <id name="databaseActionId" type="java.lang.Integer">
+            <column name="database_action_id" />
+            <generator class="identity" />
+        </id>
+        <version name="version" type="int">
+            <column name="version" not-null="true" />
+        </version>
+        <property name="upgradeActionId" type="java.lang.Integer">
+            <column name="upgrade_action_id" />
+        </property>
+        <property name="schemaName" type="string">
+            <column name="schema_name" length="64" />
+        </property>
+        <property name="timing" type="int">
+            <column name="timing" not-null="true" />
+        </property>
+        <property name="action" type="int">
+            <column name="action" not-null="true" />
+        </property>
+        <property name="info1" type="string">
+            <column name="info1" />
+        </property>
+        <property name="info2" type="string">
+            <column name="info2" />
+        </property>
+        <property name="tablename" type="string">
+            <column name="tablename" length="64" />
+        </property>
+        <property name="tablenameBackup" type="string">
+            <column name="tablename_backup" length="64" />
+        </property>
+        <property name="tableBackupSchema" type="string">
+            <column name="table_backup_schema" length="65535" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

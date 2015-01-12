@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Clients" table="ox_clients" >
+        <id name="clientid" type="java.lang.Integer">
+            <column name="clientid" />
+            <generator class="identity" />
+        </id>
+        <property name="agencyid" type="int">
+            <column name="agencyid" not-null="true" />
+        </property>
+        <property name="clientname" type="string">
+            <column name="clientname" not-null="true" />
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="64" not-null="true" />
+        </property>
+        <property name="report" type="string">
+            <column name="report" length="2" not-null="true" />
+        </property>
+        <property name="reportinterval" type="int">
+            <column name="reportinterval" not-null="true" />
+        </property>
+        <property name="reportlastdate" type="date">
+            <column name="reportlastdate" length="10" not-null="true" />
+        </property>
+        <property name="reportdeactivate" type="string">
+            <column name="reportdeactivate" length="2" not-null="true" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+        <property name="anAdnetworkId" type="java.lang.Integer">
+            <column name="an_adnetwork_id" />
+        </property>
+        <property name="asAdvertiserId" type="java.lang.Integer">
+            <column name="as_advertiser_id" />
+        </property>
+        <property name="accountId" type="java.lang.Integer">
+            <column name="account_id" unique="true" />
+        </property>
+        <property name="advertiserLimitation" type="boolean">
+            <column name="advertiser_limitation" not-null="true" />
+        </property>
+        <property name="type" type="byte">
+            <column name="type" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

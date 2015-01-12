@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataIntermediateAdConnection" table="ox_data_intermediate_ad_connection" >
+        <id name="dataIntermediateAdConnectionId" type="java.lang.Long">
+            <column name="data_intermediate_ad_connection_id" />
+            <generator class="identity" />
+        </id>
+        <property name="serverRawIp" type="string">
+            <column name="server_raw_ip" length="16" not-null="true" />
+        </property>
+        <property name="serverRawTrackerImpressionId" type="long">
+            <column name="server_raw_tracker_impression_id" not-null="true" />
+        </property>
+        <property name="viewerId" type="string">
+            <column name="viewer_id" length="32" />
+        </property>
+        <property name="viewerSessionId" type="string">
+            <column name="viewer_session_id" length="32" />
+        </property>
+        <property name="trackerDateTime" type="timestamp">
+            <column name="tracker_date_time" length="19" not-null="true" />
+        </property>
+        <property name="connectionDateTime" type="timestamp">
+            <column name="connection_date_time" length="19" />
+        </property>
+        <property name="trackerId" type="int">
+            <column name="tracker_id" not-null="true" />
+        </property>
+        <property name="adId" type="int">
+            <column name="ad_id" not-null="true" />
+        </property>
+        <property name="creativeId" type="int">
+            <column name="creative_id" not-null="true" />
+        </property>
+        <property name="zoneId" type="int">
+            <column name="zone_id" not-null="true" />
+        </property>
+        <property name="trackerChannel" type="string">
+            <column name="tracker_channel" />
+        </property>
+        <property name="connectionChannel" type="string">
+            <column name="connection_channel" />
+        </property>
+        <property name="trackerChannelIds" type="string">
+            <column name="tracker_channel_ids" length="64" />
+        </property>
+        <property name="connectionChannelIds" type="string">
+            <column name="connection_channel_ids" length="64" />
+        </property>
+        <property name="trackerLanguage" type="string">
+            <column name="tracker_language" length="13" />
+        </property>
+        <property name="connectionLanguage" type="string">
+            <column name="connection_language" length="13" />
+        </property>
+        <property name="trackerIpAddress" type="string">
+            <column name="tracker_ip_address" length="16" />
+        </property>
+        <property name="connectionIpAddress" type="string">
+            <column name="connection_ip_address" length="16" />
+        </property>
+        <property name="trackerHostName" type="string">
+            <column name="tracker_host_name" />
+        </property>
+        <property name="connectionHostName" type="string">
+            <column name="connection_host_name" />
+        </property>
+        <property name="trackerCountry" type="string">
+            <column name="tracker_country" length="2" />
+        </property>
+        <property name="connectionCountry" type="string">
+            <column name="connection_country" length="2" />
+        </property>
+        <property name="trackerHttps" type="java.lang.Integer">
+            <column name="tracker_https" />
+        </property>
+        <property name="connectionHttps" type="java.lang.Integer">
+            <column name="connection_https" />
+        </property>
+        <property name="trackerDomain" type="string">
+            <column name="tracker_domain" />
+        </property>
+        <property name="connectionDomain" type="string">
+            <column name="connection_domain" />
+        </property>
+        <property name="trackerPage" type="string">
+            <column name="tracker_page" />
+        </property>
+        <property name="connectionPage" type="string">
+            <column name="connection_page" />
+        </property>
+        <property name="trackerQuery" type="string">
+            <column name="tracker_query" />
+        </property>
+        <property name="connectionQuery" type="string">
+            <column name="connection_query" />
+        </property>
+        <property name="trackerReferer" type="string">
+            <column name="tracker_referer" />
+        </property>
+        <property name="connectionReferer" type="string">
+            <column name="connection_referer" />
+        </property>
+        <property name="trackerSearchTerm" type="string">
+            <column name="tracker_search_term" />
+        </property>
+        <property name="connectionSearchTerm" type="string">
+            <column name="connection_search_term" />
+        </property>
+        <property name="trackerUserAgent" type="string">
+            <column name="tracker_user_agent" />
+        </property>
+        <property name="connectionUserAgent" type="string">
+            <column name="connection_user_agent" />
+        </property>
+        <property name="trackerOs" type="string">
+            <column name="tracker_os" length="32" />
+        </property>
+        <property name="connectionOs" type="string">
+            <column name="connection_os" length="32" />
+        </property>
+        <property name="trackerBrowser" type="string">
+            <column name="tracker_browser" length="32" />
+        </property>
+        <property name="connectionBrowser" type="string">
+            <column name="connection_browser" length="32" />
+        </property>
+        <property name="connectionAction" type="java.lang.Integer">
+            <column name="connection_action" />
+        </property>
+        <property name="connectionWindow" type="java.lang.Integer">
+            <column name="connection_window" />
+        </property>
+        <property name="connectionStatus" type="int">
+            <column name="connection_status" not-null="true" />
+        </property>
+        <property name="insideWindow" type="boolean">
+            <column name="inside_window" not-null="true" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

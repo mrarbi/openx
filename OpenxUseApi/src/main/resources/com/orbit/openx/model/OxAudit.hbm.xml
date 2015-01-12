@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Audit" table="ox_audit" >
+        <id name="auditid" type="java.lang.Integer">
+            <column name="auditid" />
+            <generator class="identity" />
+        </id>
+        <property name="actionid" type="int">
+            <column name="actionid" not-null="true" />
+        </property>
+        <property name="context" type="string">
+            <column name="context" not-null="true" />
+        </property>
+        <property name="contextid" type="java.lang.Integer">
+            <column name="contextid" />
+        </property>
+        <property name="parentid" type="java.lang.Integer">
+            <column name="parentid" />
+        </property>
+        <property name="details" type="string">
+            <column name="details" length="65535" not-null="true" />
+        </property>
+        <property name="userid" type="int">
+            <column name="userid" not-null="true" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="64" />
+        </property>
+        <property name="usertype" type="byte">
+            <column name="usertype" not-null="true" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" />
+        </property>
+        <property name="accountId" type="int">
+            <column name="account_id" not-null="true" />
+        </property>
+        <property name="advertiserAccountId" type="java.lang.Integer">
+            <column name="advertiser_account_id" />
+        </property>
+        <property name="websiteAccountId" type="java.lang.Integer">
+            <column name="website_account_id" />
+        </property>
+    </class>
+</hibernate-mapping>

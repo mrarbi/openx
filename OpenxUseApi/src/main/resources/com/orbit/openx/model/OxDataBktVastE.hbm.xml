@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataBktVastE" table="ox_data_bkt_vast_e" >
+        <composite-id name="id" class="com.orbit.openx.model.DataBktVastEId">
+            <key-property name="intervalStart" type="timestamp">
+                <column name="interval_start" length="19" />
+            </key-property>
+            <key-property name="creativeId" type="int">
+                <column name="creative_id" />
+            </key-property>
+            <key-property name="zoneId" type="int">
+                <column name="zone_id" />
+            </key-property>
+            <key-property name="vastEventId" type="int">
+                <column name="vast_event_id" />
+            </key-property>
+        </composite-id>
+        <property name="count" type="int">
+            <column name="count" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

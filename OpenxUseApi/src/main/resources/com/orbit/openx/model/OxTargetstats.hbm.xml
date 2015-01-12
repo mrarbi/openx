@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Targetstats" table="ox_targetstats" >
+        <composite-id name="id" class="com.orbit.openx.model.TargetstatsId">
+            <key-property name="day" type="date">
+                <column name="day" length="10" />
+            </key-property>
+            <key-property name="campaignid" type="int">
+                <column name="campaignid" />
+            </key-property>
+            <key-property name="target" type="int">
+                <column name="target" />
+            </key-property>
+            <key-property name="views" type="int">
+                <column name="views" />
+            </key-property>
+            <key-property name="modified" type="byte">
+                <column name="modified" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

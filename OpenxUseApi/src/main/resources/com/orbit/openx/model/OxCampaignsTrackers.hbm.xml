@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.CampaignsTrackers" table="ox_campaigns_trackers" >
+        <id name="campaignTrackerid" type="java.lang.Integer">
+            <column name="campaign_trackerid" />
+            <generator class="identity" />
+        </id>
+        <property name="campaignid" type="int">
+            <column name="campaignid" not-null="true" />
+        </property>
+        <property name="trackerid" type="int">
+            <column name="trackerid" not-null="true" />
+        </property>
+        <property name="status" type="short">
+            <column name="status" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

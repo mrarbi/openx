@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataRawTrackerVariableValue" table="ox_data_raw_tracker_variable_value" >
+        <composite-id name="id" class="com.orbit.openx.model.DataRawTrackerVariableValueId">
+            <key-property name="serverRawTrackerImpressionId" type="long">
+                <column name="server_raw_tracker_impression_id" />
+            </key-property>
+            <key-property name="serverRawIp" type="string">
+                <column name="server_raw_ip" length="16" />
+            </key-property>
+            <key-property name="trackerVariableId" type="int">
+                <column name="tracker_variable_id" />
+            </key-property>
+        </composite-id>
+        <property name="dateTime" type="timestamp">
+            <column name="date_time" length="19" />
+        </property>
+        <property name="value" type="string">
+            <column name="value" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

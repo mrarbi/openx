@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Campaigns" table="ox_campaigns" >
+        <id name="campaignid" type="java.lang.Integer">
+            <column name="campaignid" />
+            <generator class="identity" />
+        </id>
+        <property name="campaignname" type="string">
+            <column name="campaignname" not-null="true" />
+        </property>
+        <property name="clientid" type="int">
+            <column name="clientid" not-null="true" />
+        </property>
+        <property name="views" type="java.lang.Integer">
+            <column name="views" />
+        </property>
+        <property name="clicks" type="java.lang.Integer">
+            <column name="clicks" />
+        </property>
+        <property name="conversions" type="java.lang.Integer">
+            <column name="conversions" />
+        </property>
+        <property name="priority" type="int">
+            <column name="priority" not-null="true" />
+        </property>
+        <property name="weight" type="byte">
+            <column name="weight" not-null="true" />
+        </property>
+        <property name="targetImpression" type="int">
+            <column name="target_impression" not-null="true" />
+        </property>
+        <property name="targetClick" type="int">
+            <column name="target_click" not-null="true" />
+        </property>
+        <property name="targetConversion" type="int">
+            <column name="target_conversion" not-null="true" />
+        </property>
+        <property name="anonymous" type="string">
+            <column name="anonymous" length="2" not-null="true" />
+        </property>
+        <property name="companion" type="java.lang.Short">
+            <column name="companion" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="revenue" type="big_decimal">
+            <column name="revenue" precision="10" scale="4" />
+        </property>
+        <property name="revenueType" type="java.lang.Short">
+            <column name="revenue_type" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+        <property name="block" type="int">
+            <column name="block" not-null="true" />
+        </property>
+        <property name="capping" type="int">
+            <column name="capping" not-null="true" />
+        </property>
+        <property name="sessionCapping" type="int">
+            <column name="session_capping" not-null="true" />
+        </property>
+        <property name="anCampaignId" type="java.lang.Integer">
+            <column name="an_campaign_id" />
+        </property>
+        <property name="asCampaignId" type="java.lang.Integer">
+            <column name="as_campaign_id" />
+        </property>
+        <property name="status" type="int">
+            <column name="status" not-null="true" />
+        </property>
+        <property name="anStatus" type="int">
+            <column name="an_status" not-null="true" />
+        </property>
+        <property name="asRejectReason" type="int">
+            <column name="as_reject_reason" not-null="true" />
+        </property>
+        <property name="hostedViews" type="int">
+            <column name="hosted_views" not-null="true" />
+        </property>
+        <property name="hostedClicks" type="int">
+            <column name="hosted_clicks" not-null="true" />
+        </property>
+        <property name="viewwindow" type="int">
+            <column name="viewwindow" not-null="true" />
+        </property>
+        <property name="clickwindow" type="int">
+            <column name="clickwindow" not-null="true" />
+        </property>
+        <property name="ecpm" type="big_decimal">
+            <column name="ecpm" precision="10" scale="4" />
+        </property>
+        <property name="minImpressions" type="int">
+            <column name="min_impressions" not-null="true" />
+        </property>
+        <property name="ecpmEnabled" type="byte">
+            <column name="ecpm_enabled" not-null="true" />
+        </property>
+        <property name="activateTime" type="timestamp">
+            <column name="activate_time" length="19" />
+        </property>
+        <property name="expireTime" type="timestamp">
+            <column name="expire_time" length="19" />
+        </property>
+        <property name="type" type="byte">
+            <column name="type" not-null="true" />
+        </property>
+        <property name="showCappedNoCookie" type="byte">
+            <column name="show_capped_no_cookie" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

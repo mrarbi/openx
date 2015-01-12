@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataSummaryZoneImpressionHistory" table="ox_data_summary_zone_impression_history" >
+        <id name="dataSummaryZoneImpressionHistoryId" type="java.lang.Long">
+            <column name="data_summary_zone_impression_history_id" />
+            <generator class="identity" />
+        </id>
+        <property name="operationInterval" type="int">
+            <column name="operation_interval" not-null="true" />
+        </property>
+        <property name="operationIntervalId" type="int">
+            <column name="operation_interval_id" not-null="true" />
+        </property>
+        <property name="intervalStart" type="timestamp">
+            <column name="interval_start" length="19" not-null="true" />
+        </property>
+        <property name="intervalEnd" type="timestamp">
+            <column name="interval_end" length="19" not-null="true" />
+        </property>
+        <property name="zoneId" type="int">
+            <column name="zone_id" not-null="true" />
+        </property>
+        <property name="forecastImpressions" type="java.lang.Integer">
+            <column name="forecast_impressions" />
+        </property>
+        <property name="actualImpressions" type="java.lang.Integer">
+            <column name="actual_impressions" />
+        </property>
+        <property name="est" type="java.lang.Short">
+            <column name="est" />
+        </property>
+    </class>
+</hibernate-mapping>

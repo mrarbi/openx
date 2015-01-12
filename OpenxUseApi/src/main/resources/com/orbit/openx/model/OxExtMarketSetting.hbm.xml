@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.ExtMarketSetting" table="ox_ext_market_setting" >
+        <composite-id name="id" class="com.orbit.openx.model.ExtMarketSettingId">
+            <key-property name="marketSettingId" type="int">
+                <column name="market_setting_id" />
+            </key-property>
+            <key-property name="marketSettingTypeId" type="int">
+                <column name="market_setting_type_id" />
+            </key-property>
+            <key-property name="ownerTypeId" type="int">
+                <column name="owner_type_id" />
+            </key-property>
+            <key-property name="ownerId" type="int">
+                <column name="owner_id" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

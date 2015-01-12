@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="imports.tiles" template="/tiles/imports.jsp">
+	    <put-attribute name="imports" value="/tiles/imports.jsp"/>
+	</definition>
+	
+	<definition name="baseLayout.tiles" template="/tiles/baseLayout.jsp" extends="imports.tiles">
+	    <put-attribute name="title" value=".:: ORION ADS ::."/>
+	    <put-attribute name="header" value="/tiles/header.jsp"/>
+	    <put-attribute name="leftMenu" value="/tiles/leftmenu.jsp"/>
+	    <put-attribute name="rightMenu" value="/tiles/rightmenu.jsp"/>
+	    <put-attribute name="body" value="/tiles/body.jsp"/>
+	    <put-attribute name="footer" value="/tiles/footer.jsp"/>
+	</definition>
+  
+	<definition name="login.tiles" template="/login.jsp" extends="imports.tiles"/>
+  
+	<definition name="error.tiles" extends="baseLayout.tiles">
+		<put-attribute name="body" value="/tiles/error.jsp" />
+	</definition>
+  
+	<definition name="accueil.tiles" extends="baseLayout.tiles">
+	    <put-attribute name="body" value="/index.jsp"/>      
+	</definition>
+	
+	<definition name="listzone.tiles" extends="baseLayout.tiles">
+	    <put-attribute name="body" value="/listzone.jsp"/>      
+	</definition>
+	
+	<definition name="site.tiles" extends="baseLayout.tiles">
+	    <put-attribute name="body" value="/site.jsp"/>      
+	</definition>
+	
+	<definition name="addsite.tiles" extends="baseLayout.tiles">
+	    <put-attribute name="body" value="/addsite.jsp"/>
+	</definition>
+	
+	<definition name="addzone.tiles" extends="baseLayout.tiles">
+	    <put-attribute name="body" value="/addzone.jsp"/>      
+	</definition>
+	
+	<definition name="addadvert.tiles" extends="baseLayout.tiles">
+	    <put-attribute name="body" value="/addadvert.jsp"/>      
+	</definition>
+  
+  	<definition name="annonceurs.tiles" extends="baseLayout.tiles">
+	    <put-attribute name="body" value="/annonceurs.jsp"/>      
+	</definition>
+	
+</tiles-definitions>

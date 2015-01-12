@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Images" table="ox_images" >
+        <id name="filename" type="string">
+            <column name="filename" length="128" />
+            <generator class="assigned" />
+        </id>
+        <property name="contents" type="binary">
+            <column name="contents" not-null="true" />
+        </property>
+        <property name="TStamp" type="timestamp">
+            <column name="t_stamp" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

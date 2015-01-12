@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Variables" table="ox_variables" >
+        <id name="variableid" type="java.lang.Integer">
+            <column name="variableid" />
+            <generator class="identity" />
+        </id>
+        <property name="trackerid" type="int">
+            <column name="trackerid" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="250" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="250" />
+        </property>
+        <property name="datatype" type="string">
+            <column name="datatype" length="8" not-null="true" />
+        </property>
+        <property name="purpose" type="string">
+            <column name="purpose" length="13" />
+        </property>
+        <property name="rejectIfEmpty" type="short">
+            <column name="reject_if_empty" not-null="true" />
+        </property>
+        <property name="isUnique" type="int">
+            <column name="is_unique" not-null="true" />
+        </property>
+        <property name="uniqueWindow" type="int">
+            <column name="unique_window" not-null="true" />
+        </property>
+        <property name="variablecode" type="string">
+            <column name="variablecode" not-null="true" />
+        </property>
+        <property name="hidden" type="string">
+            <column name="hidden" length="2" not-null="true" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

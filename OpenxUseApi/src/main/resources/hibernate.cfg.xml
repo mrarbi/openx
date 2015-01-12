@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+     "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Paramètres de connexion à la base de données -->
+		<!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> -->
+		<!-- <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> -->
+		<!-- <property name="hibernate.connection.url">jdbc:mysql://localhost/openads</property> -->
+		<!-- <property name="hibernate.connection.username">root</property> -->
+		<!-- <property name="hibernate.connection.password"></property> -->
+		<!-- <property name="show_sql">true</property> -->
+
+		<!-- Comportement pour la conservation des tables -->
+		<!-- <property name="hbm2ddl.auto">update</property> -->
+
+		<!-- Fichiers à mapper -->
+
+		<mapping resource="com/orbit/openx/model/OxAccountPreferenceAssoc.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAccounts.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAccountUserAssoc.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAccountUserPermissionAssoc.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAcls.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAclsChannel.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAdCategoryAssoc.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAdZoneAssoc.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAffiliates.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAffiliatesExtra.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAgency.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxApplicationVariable.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxAudit.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxBanners.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxBannerVastElement.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxCampaigns.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxCampaignsTrackers.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxCategory.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxChannel.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxClients.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDatabaseAction.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataBktA.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataBktAVar.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataBktC.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataBktM.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataBktR.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataBktVastE.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataIntermediateAd.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataIntermediateAdConnection.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataIntermediateAdVariableValue.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataRawAdClick.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataRawAdImpression.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataRawAdRequest.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataRawTrackerImpression.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataRawTrackerVariableValue.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataSummaryAdHourly.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataSummaryAdZoneAssoc.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataSummaryChannelDaily.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxDataSummaryZoneImpressionHistory.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketAdvertiser.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketAssocData.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketCampaignPref.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketGeneralPref.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketPluginVariable.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketSetting.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketStats.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketWebsitePref.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxExtMarketWebStats.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxImages.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxLogMaintenanceForecasting.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxLogMaintenancePriority.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxLogMaintenanceStatistics.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxPasswordRecovery.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxPlacementZoneAssoc.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxPreferences.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxSession.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxStatsVast.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxTargetstats.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxTrackerAppend.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxTrackers.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxUpgradeAction.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxUserlog.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxUsers.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxVariablePublisher.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxVariables.hbm.xml" />
+		<mapping resource="com/orbit/openx/model/OxZones.hbm.xml" />
+
+	</session-factory>
+</hibernate-configuration>

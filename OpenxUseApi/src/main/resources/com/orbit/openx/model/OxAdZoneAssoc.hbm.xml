@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.AdZoneAssoc" table="ox_ad_zone_assoc" >
+        <id name="adZoneAssocId" type="java.lang.Integer">
+            <column name="ad_zone_assoc_id" />
+            <generator class="identity" />
+        </id>
+        <property name="zoneId" type="java.lang.Integer">
+            <column name="zone_id" />
+        </property>
+        <property name="adId" type="java.lang.Integer">
+            <column name="ad_id" />
+        </property>
+        <property name="priority" type="java.lang.Double">
+            <column name="priority" precision="22" scale="0" />
+        </property>
+        <property name="linkType" type="short">
+            <column name="link_type" not-null="true" />
+        </property>
+        <property name="priorityFactor" type="java.lang.Double">
+            <column name="priority_factor" precision="22" scale="0" />
+        </property>
+        <property name="toBeDelivered" type="boolean">
+            <column name="to_be_delivered" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

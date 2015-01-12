@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.BannerVastElement" table="ox_banner_vast_element" >
+        <composite-id name="id" class="com.orbit.openx.model.BannerVastElementId">
+            <key-property name="bannerVastElementId" type="int">
+                <column name="banner_vast_element_id" />
+            </key-property>
+            <key-property name="bannerId" type="int">
+                <column name="banner_id" />
+            </key-property>
+            <key-property name="vastElementType" type="string">
+                <column name="vast_element_type" length="16" />
+            </key-property>
+            <key-property name="vastVideoId" type="string">
+                <column name="vast_video_id" length="100" />
+            </key-property>
+            <key-property name="vastVideoDuration" type="java.lang.Integer">
+                <column name="vast_video_duration" />
+            </key-property>
+            <key-property name="vastVideoDelivery" type="string">
+                <column name="vast_video_delivery" length="20" />
+            </key-property>
+            <key-property name="vastVideoType" type="string">
+                <column name="vast_video_type" length="20" />
+            </key-property>
+            <key-property name="vastVideoBitrate" type="string">
+                <column name="vast_video_bitrate" length="20" />
+            </key-property>
+            <key-property name="vastVideoHeight" type="java.lang.Integer">
+                <column name="vast_video_height" />
+            </key-property>
+            <key-property name="vastVideoWidth" type="java.lang.Integer">
+                <column name="vast_video_width" />
+            </key-property>
+            <key-property name="vastVideoOutgoingFilename" type="string">
+                <column name="vast_video_outgoing_filename" length="65535" />
+            </key-property>
+            <key-property name="vastCompanionBannerId" type="java.lang.Integer">
+                <column name="vast_companion_banner_id" />
+            </key-property>
+            <key-property name="vastOverlayHeight" type="java.lang.Integer">
+                <column name="vast_overlay_height" />
+            </key-property>
+            <key-property name="vastOverlayWidth" type="java.lang.Integer">
+                <column name="vast_overlay_width" />
+            </key-property>
+            <key-property name="vastVideoClickthroughUrl" type="string">
+                <column name="vast_video_clickthrough_url" length="65535" />
+            </key-property>
+            <key-property name="vastOverlayAction" type="string">
+                <column name="vast_overlay_action" length="20" />
+            </key-property>
+            <key-property name="vastOverlayFormat" type="string">
+                <column name="vast_overlay_format" length="20" />
+            </key-property>
+            <key-property name="vastOverlayTextTitle" type="string">
+                <column name="vast_overlay_text_title" length="65535" />
+            </key-property>
+            <key-property name="vastOverlayTextDescription" type="string">
+                <column name="vast_overlay_text_description" length="65535" />
+            </key-property>
+            <key-property name="vastOverlayTextCall" type="string">
+                <column name="vast_overlay_text_call" length="65535" />
+            </key-property>
+            <key-property name="vastCreativeType" type="string">
+                <column name="vast_creative_type" length="20" />
+            </key-property>
+            <key-property name="vastThirdpartyImpression" type="string">
+                <column name="vast_thirdparty_impression" length="65535" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Channel" table="ox_channel" >
+        <id name="channelid" type="java.lang.Integer">
+            <column name="channelid" />
+            <generator class="identity" />
+        </id>
+        <property name="agencyid" type="int">
+            <column name="agencyid" not-null="true" />
+        </property>
+        <property name="affiliateid" type="int">
+            <column name="affiliateid" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="compiledlimitation" type="string">
+            <column name="compiledlimitation" length="65535" not-null="true" />
+        </property>
+        <property name="aclPlugins" type="string">
+            <column name="acl_plugins" length="65535" />
+        </property>
+        <property name="active" type="java.lang.Short">
+            <column name="active" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" length="65535" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+        <property name="aclsUpdated" type="timestamp">
+            <column name="acls_updated" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

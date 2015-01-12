@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.ExtMarketAdvertiser" table="ox_ext_market_advertiser" >
+        <composite-id name="id" class="com.orbit.openx.model.ExtMarketAdvertiserId">
+            <key-property name="marketAdvertiserId" type="string">
+                <column name="market_advertiser_id" length="36" />
+            </key-property>
+            <key-property name="name" type="string">
+                <column name="name" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

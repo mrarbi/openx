@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.Userlog" table="ox_userlog" >
+        <id name="userlogid" type="java.lang.Integer">
+            <column name="userlogid" />
+            <generator class="identity" />
+        </id>
+        <version name="timestamp" type="int">
+            <column name="timestamp" not-null="true" />
+        </version>
+        <property name="usertype" type="byte">
+            <column name="usertype" not-null="true" />
+        </property>
+        <property name="userid" type="int">
+            <column name="userid" not-null="true" />
+        </property>
+        <property name="action" type="int">
+            <column name="action" not-null="true" />
+        </property>
+        <property name="object" type="java.lang.Integer">
+            <column name="object" />
+        </property>
+        <property name="details" type="string">
+            <column name="details" length="16777215" />
+        </property>
+    </class>
+</hibernate-mapping>

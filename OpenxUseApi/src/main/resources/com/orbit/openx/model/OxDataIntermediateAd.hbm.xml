@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataIntermediateAd" table="ox_data_intermediate_ad" >
+        <id name="dataIntermediateAdId" type="java.lang.Long">
+            <column name="data_intermediate_ad_id" />
+            <generator class="identity" />
+        </id>
+        <property name="dateTime" type="timestamp">
+            <column name="date_time" length="19" not-null="true" />
+        </property>
+        <property name="operationInterval" type="int">
+            <column name="operation_interval" not-null="true" />
+        </property>
+        <property name="operationIntervalId" type="int">
+            <column name="operation_interval_id" not-null="true" />
+        </property>
+        <property name="intervalStart" type="timestamp">
+            <column name="interval_start" length="19" not-null="true" />
+        </property>
+        <property name="intervalEnd" type="timestamp">
+            <column name="interval_end" length="19" not-null="true" />
+        </property>
+        <property name="adId" type="int">
+            <column name="ad_id" not-null="true" />
+        </property>
+        <property name="creativeId" type="int">
+            <column name="creative_id" not-null="true" />
+        </property>
+        <property name="zoneId" type="int">
+            <column name="zone_id" not-null="true" />
+        </property>
+        <property name="requests" type="int">
+            <column name="requests" not-null="true" />
+        </property>
+        <property name="impressions" type="int">
+            <column name="impressions" not-null="true" />
+        </property>
+        <property name="clicks" type="int">
+            <column name="clicks" not-null="true" />
+        </property>
+        <property name="conversions" type="int">
+            <column name="conversions" not-null="true" />
+        </property>
+        <property name="totalBasketValue" type="big_decimal">
+            <column name="total_basket_value" precision="10" scale="4" not-null="true" />
+        </property>
+        <property name="totalNumItems" type="int">
+            <column name="total_num_items" not-null="true" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

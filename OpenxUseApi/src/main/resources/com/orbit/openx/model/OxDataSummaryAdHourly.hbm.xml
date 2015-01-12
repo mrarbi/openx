@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.DataSummaryAdHourly" table="ox_data_summary_ad_hourly" >
+        <id name="dataSummaryAdHourlyId" type="java.lang.Long">
+            <column name="data_summary_ad_hourly_id" />
+            <generator class="identity" />
+        </id>
+        <property name="dateTime" type="timestamp">
+            <column name="date_time" length="19" not-null="true" />
+        </property>
+        <property name="adId" type="int">
+            <column name="ad_id" not-null="true" />
+        </property>
+        <property name="creativeId" type="int">
+            <column name="creative_id" not-null="true" />
+        </property>
+        <property name="zoneId" type="int">
+            <column name="zone_id" not-null="true" />
+        </property>
+        <property name="requests" type="int">
+            <column name="requests" not-null="true" />
+        </property>
+        <property name="impressions" type="int">
+            <column name="impressions" not-null="true" />
+        </property>
+        <property name="clicks" type="int">
+            <column name="clicks" not-null="true" />
+        </property>
+        <property name="conversions" type="int">
+            <column name="conversions" not-null="true" />
+        </property>
+        <property name="totalBasketValue" type="big_decimal">
+            <column name="total_basket_value" precision="10" scale="4" />
+        </property>
+        <property name="totalNumItems" type="java.lang.Integer">
+            <column name="total_num_items" />
+        </property>
+        <property name="totalRevenue" type="big_decimal">
+            <column name="total_revenue" precision="10" scale="4" />
+        </property>
+        <property name="totalCost" type="big_decimal">
+            <column name="total_cost" precision="10" scale="4" />
+        </property>
+        <property name="totalTechcost" type="big_decimal">
+            <column name="total_techcost" precision="10" scale="4" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

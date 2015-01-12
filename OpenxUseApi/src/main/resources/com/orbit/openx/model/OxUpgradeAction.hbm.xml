@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.UpgradeAction" table="ox_upgrade_action" >
+        <id name="upgradeActionId" type="java.lang.Integer">
+            <column name="upgrade_action_id" />
+            <generator class="identity" />
+        </id>
+        <property name="upgradeName" type="string">
+            <column name="upgrade_name" length="128" />
+        </property>
+        <property name="versionTo" type="string">
+            <column name="version_to" length="64" not-null="true" />
+        </property>
+        <property name="versionFrom" type="string">
+            <column name="version_from" length="64" />
+        </property>
+        <property name="action" type="int">
+            <column name="action" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="logfile" type="string">
+            <column name="logfile" length="128" />
+        </property>
+        <property name="confbackup" type="string">
+            <column name="confbackup" length="128" />
+        </property>
+        <property name="updated" type="timestamp">
+            <column name="updated" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

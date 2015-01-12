@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 f?vr. 2014 12:11:47 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.orbit.openx.model.PlacementZoneAssoc" table="ox_placement_zone_assoc" >
+        <id name="placementZoneAssocId" type="java.lang.Integer">
+            <column name="placement_zone_assoc_id" />
+            <generator class="identity" />
+        </id>
+        <property name="zoneId" type="java.lang.Integer">
+            <column name="zone_id" />
+        </property>
+        <property name="placementId" type="java.lang.Integer">
+            <column name="placement_id" />
+        </property>
+    </class>
+</hibernate-mapping>
